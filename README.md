@@ -1,4 +1,4 @@
-# COUNTRIES_SEARCHING_APPLICATION
+# SEARCH_COUNTRIES_ENGINE_APPLICATION
 
 Searching countries application in React and Redux technologies.
 
