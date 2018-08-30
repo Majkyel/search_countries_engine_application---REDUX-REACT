@@ -1,16 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {Router, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store from './store/store.js';
 import DevTools from './DevTools.js';
+import routes from './routes';
 
 
-render(
+render (
     <Provider store={store}>
-        <div>
-            <h1>HELLO!!</h1>
-            <DevTools/>
-        </div>  
+        <Router history={hashHistory} routes={routes}/>
     </Provider>,
     document.getElementById('root')
 );
