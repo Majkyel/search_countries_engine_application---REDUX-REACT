@@ -4,7 +4,7 @@ import {Router, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store from './store/store.js';
 import DevTools from './DevTools.js';
-import routes from './routes';
+import routes from './routes.js';
 
 
 render (
