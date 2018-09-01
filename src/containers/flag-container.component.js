@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CountryFlagList from '../presentational/flag-list.component.js';
 import {getCountries} from '../actions/actions.js';
+import {searchCountries} from '../actions/actions.js';
+import {deleteCountry} from '../actions/actions.js';
 
 
 class CountryFlagContainer extends Component {
@@ -12,12 +14,24 @@ class CountryFlagContainer extends Component {
     
     componentDidMount() {
         this.props.dispatch(getCountries());
+        this.props.dispatch(searchCountries(''));
+    }
+    
+    search(event) {
+        this.props.dispatch(searchCountries(event.target.value));
+    }
+    
+    deleteCountry(id) {
+        this.props.dispatch(deleteCountry(id));
     }
     
     render() {
         return (
             <div>
-                <CountryFlagList countries={this.props.countries}/>
+                <div className='search text-center'>
+                    <input type='text' onChange={this.search.bind(this)}/>
+                </div>
+                <CountryFlagList countries={this.props.visibleCountries} deleteCountry={this.deleteCountry.bind(this)}/>
             </div>
         )
     }
@@ -26,7 +40,8 @@ class CountryFlagContainer extends Component {
 
 const mapStateToProps = function (store) {
     return {
-        countries: store.countriesReducer.countries     
+        countries: store.countriesReducer.countries,
+        visibleCountries: store.countriesReducer.visibleCountries
     };
 };
 
