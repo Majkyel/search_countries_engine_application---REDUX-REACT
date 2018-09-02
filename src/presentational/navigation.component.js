@@ -6,7 +6,7 @@ const Navigation = props => (
     <div>
         <nav className='navbar navbar-expand-lg navbar-light bg-light'>
             <div className='container-fluid'>
-                <div className=''>
+                <div>
                     <Link className='navbar-brand' to='/'>Państwa.js</Link>
                 </div>
                 <div className='nav navbar-collapse'>
