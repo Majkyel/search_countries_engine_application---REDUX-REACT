@@ -12,6 +12,8 @@ In this task I created presentational components in presentational/ folder. In n
 
 ## Task-20.5
 
+In this task I created container components in containers/ folder. I ended write application mechanism in containers components. I added all countries in list, division of countries into 2 other continents and next I added single-country view with information if you click in some flag. I added routes to all components. At the end I styled all applications.
+
 ## SOURCE 
 While creating the project I used: 
 1. Redux - Documentation [https://redux.js.org/#documentation]
