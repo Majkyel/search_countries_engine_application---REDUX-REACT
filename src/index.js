@@ -7,7 +7,7 @@ import DevTools from './DevTools.js';
 import routes from './routes.js';
 
 
-render (
+render(
     <Provider store={store}>
         <div>
             <Router history={hashHistory} routes={routes}/>

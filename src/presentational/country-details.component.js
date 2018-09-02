@@ -1,4 +1,5 @@
 import React from 'react';
+import '../country.css';
 
 
 const CountryDetails = (props) => (
@@ -13,15 +14,15 @@ const CountryDetails = (props) => (
             </div>
             <div className='info'>
                 <div>
-                    <span>Capital</span>
+                    <span>Capital: </span>
                     <span>{props.country.capital}</span>
                 </div>
                 <div>
-                    <span>{props.country.populace}</span>
-                    <span>Populace[mln]</span>
+                    <span>Populace[mln]: </span>
+                    <span>{props.country.populace}</span>   
                 </div>
                 <div>
-                    <span>Currency</span>
+                    <span>Currency: </span>
                     <span>{props.country.currency}</span>
                 </div>
             </div>

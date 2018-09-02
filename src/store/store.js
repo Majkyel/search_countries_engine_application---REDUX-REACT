@@ -8,6 +8,4 @@ const store = createStore(
     DevTools.instrument()
 );
 
-store.dispatch(getCountries());
-
 export default store;

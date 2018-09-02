@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router';
 import CountryFlag from './flag.component.js';
+import '../country.css';
 
 
-const CounterFlagList = (props) => (
+const CountryFlagList = (props) => (
     <div className='countries-List'>
         {props.countries.map(country => {
             return (
@@ -18,4 +19,4 @@ const CounterFlagList = (props) => (
     </div>
 );
 
-export default CounterFlagList;
+export default CountryFlagList;
