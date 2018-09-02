@@ -10,16 +10,16 @@ class ContinentsContainer extends Component {
         super(props);
     }
     
+    componentDidMount() {
+        this.props.dispatch(setContinent('Europe'))
+    }
+    
     chooseContinent(event) {
         this.props.dispatch(setContinent(event.target.value))
     }
     
     deleteCountry(id) {
         this.props.dispatch(deleteCountry(id))
-    }
-    
-    componentDidMount() {
-        this.props.dispatch(setContinent('Europe'))
     }
     
     render() {
